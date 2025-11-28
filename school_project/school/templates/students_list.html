@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Students</title>
+</head>
+<body>
+    <h1>Students</h1>
+
+    {% if students %}
+        <ul>
+            {% for s in students %}
+                <li>
+                    <a href="/students/{{ s.id }}/">
+                        {{ s.first_name }} {{ s.last_name }}
+                    </a>
+                    – Grade: {{ s.grade }} – Active: {{ s.is_active }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No students found.</p>
+    {% endif %}
+</body>
+</html>

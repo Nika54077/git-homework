@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Teachers</title>
+</head>
+<body>
+    <h1>Teachers</h1>
+
+    {% if teachers %}
+        <ul>
+            {% for t in teachers %}
+                <li>
+                    <a href="/teachers/{{ t.id }}/">
+                        {{ t.first_name }} {{ t.last_name }}
+                    </a>
+                    – Subject: {{ t.subject }} – Active: {{ t.is_active }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No teachers found.</p>
+    {% endif %}
+</body>
+</html>

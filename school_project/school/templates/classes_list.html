@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Classes</title>
+</head>
+<body>
+    <h1>Classes</h1>
+
+    {% if classes %}
+        <ul>
+            {% for c in classes %}
+                <li>
+                    <a href="/classes/{{ c.id }}/">
+                        {{ c.name }}
+                    </a>
+                    – Active: {{ c.is_active }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No classes found.</p>
+    {% endif %}
+</body>
+</html>

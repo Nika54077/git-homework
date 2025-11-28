@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Details</title>
+</head>
+<body>
+    <h1>{{ teacher.first_name }} {{ teacher.last_name }}</h1>
+
+    <p><strong>Subject:</strong> {{ teacher.subject }}</p>
+    <p><strong>Years of Experience:</strong> {{ teacher.years_of_experience }}</p>
+    <p><strong>Active:</strong> {{ teacher.is_active }}</p>
+
+    <a href="/teachers/">Back to all teachers</a>
+</body>
+</html>
